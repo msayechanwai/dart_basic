@@ -34,7 +34,8 @@ int order({ required String? chicken,String? cola, String? potato}){
   if(chicken!=null && cola!=null && potato!=null){
   int total=chickenPrice+colaPrice+potatoPrice;
   double discount=total*(30/100);
-  fee=discount.toInt();
+  int charges =discount.toInt();
+  fee=total-charges;
   }
   return fee;
 }
